@@ -1,0 +1,100 @@
+
+
+/* General page styling */
+html, body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background: #018DED url('https://unsplash.it/1500/1000?image=881&blur=50') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* Clock container */
+.clock {
+  width: 30rem;
+  height: 30rem;
+  border: 20px solid white;
+  border-radius: 50%;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1),
+              inset 0 0 0 3px #EFEFEF,
+              inset 0 0 10px black,
+              0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Clock face styling */
+.clock-face {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Styling for clock hands */
+.hand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0% 50%; /* Rotate around the left end */
+  background: black;
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  /* Adjust to ensure hands are not overlapping */
+}
+
+/* Hour hand */
+.hour-hand {
+  width: 20%; /* Shortened length */
+  height: 8px; /* Thickness */
+  background: black;
+  transform: rotate(90deg);
+}
+
+/* Minute hand */
+.min-hand {
+  width: 30%; /* Shortened length */
+  height: 6px; /* Thickness */
+  background: rgb(95, 168, 21); /* Slightly different color */
+  transform: rotate(90deg);
+}
+
+/* Second hand */
+.second-hand {
+  width: 33%; /* Shortened length */
+  height: 2px; /* Thickness */
+  background: red; /* Color for visibility */
+  transform: rotate(90deg);
+}
+
+/* Styling the numbers on the clock face */
+.number {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Correct positions for each number on the clock face with downward facing */
+.number12 { transform: translate(-50%, -50%) rotate(0deg) translateY(-13rem) rotate(0deg); }
+.number1  { transform: translate(-50%, -50%) rotate(30deg) translateY(-13rem) rotate(-30deg); }
+.number2  { transform: translate(-50%, -50%) rotate(60deg) translateY(-13rem) rotate(-60deg); }
+.number3  { transform: translate(-50%, -50%) rotate(90deg) translateY(-13rem) rotate(-90deg); }
+.number4  { transform: translate(-50%, -50%) rotate(120deg) translateY(-13rem) rotate(-120deg); }
+.number5  { transform: translate(-50%, -50%) rotate(150deg) translateY(-13rem) rotate(-150deg); }
+.number6  { transform: translate(-50%, -50%) rotate(180deg) translateY(-13rem) rotate(-180deg); }
+.number7  { transform: translate(-50%, -50%) rotate(210deg) translateY(-13rem) rotate(-210deg); }
+.number8  { transform: translate(-50%, -50%) rotate(240deg) translateY(-13rem) rotate(-240deg); }
+.number9  { transform: translate(-50%, -50%) rotate(270deg) translateY(-13rem) rotate(-270deg); }
+.number10 { transform: translate(-50%, -50%) rotate(300deg) translateY(-13rem) rotate(-300deg); }
+.number11 { transform: translate(-50%, -50%) rotate(330deg) translateY(-13rem) rotate(-330deg); }
